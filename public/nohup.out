@@ -1,0 +1,75 @@
+
+> www@0.0.0 start /home/bitnami/www
+> node ./bin/www
+
+Mon, 01 May 2017 08:34:52 GMT express-session deprecated undefined resave option; provide resave option at app.js:27:9
+Mon, 01 May 2017 08:34:52 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at app.js:27:9
+debug1
+debug2
+Mon, 01 May 2017 08:34:54 GMT express deprecated res.send(status, body): Use res.status(status).send(body) instead at routes/api.js:49:14
+[0mGET /api/posts [36m304 [0m31.939 ms - -[0m
+debug1
+debug2
+[0mGET /api/posts [36m304 [0m5.577 ms - -[0m
+debug1
+debug2
+[0mGET /api/posts [36m304 [0m3.596 ms - -[0m
+debug1
+debug2
+[0mGET /api/posts [36m304 [0m4.920 ms - -[0m
+[0mPOST /auth/login [36m302 [0m19.820 ms - 35[0m
+[0mGET /auth/failure [32m200 [0m1.103 ms - 72[0m
+debug1
+debug2
+[0mGET /api/posts [32m200 [0m2.769 ms - 744[0m
+debug1
+debug2
+[0mGET /api/posts [32m200 [0m2.809 ms - 744[0m
+debug1
+debug2
+[0mGET /api/posts [36m304 [0m2.034 ms - -[0m
+debug1
+debug2
+[0mGET /api/posts [36m304 [0m3.567 ms - -[0m
+debug1
+debug2
+[0mGET /api/posts [32m200 [0m2.472 ms - 744[0m
+debug1
+debug2
+[0mGET /api/posts [32m200 [0m2.530 ms - 744[0m
+debug1
+debug2
+[0mGET /api/posts [36m304 [0m2.405 ms - -[0m
+debug1
+debug2
+[0mGET /api/posts [36m304 [0m3.148 ms - -[0m
+debug1
+debug2
+[0mGET /api/posts [32m200 [0m2.193 ms - 744[0m
+debug1
+debug2
+[0mGET /api/posts [32m200 [0m3.484 ms - 744[0m
+debug1
+debug2
+[0mGET /api/posts [32m200 [0m3.004 ms - 744[0m
+debug1
+debug2
+[0mGET /api/posts [36m304 [0m1.961 ms - -[0m
+debug1
+debug2
+[0mGET /api/posts [36m304 [0m2.447 ms - -[0m
+debug1
+debug2
+[0mGET /api/posts [36m304 [0m1.736 ms - -[0m
+debug1
+debug2
+[0mGET /api/posts [36m304 [0m2.082 ms - -[0m
+debug1
+debug2
+[0mGET /api/posts [32m200 [0m1.842 ms - 744[0m
+debug1
+debug2
+[0mGET /api/posts [32m200 [0m6.373 ms - 744[0m
+debug1
+debug2
+[0mGET /api/posts [32m200 [0m2.879 ms - 744[0m
