@@ -25,4 +25,4 @@ run
 ```
 sudo find / -name sites-available*
 ```
-if you change the root index being used, you will need to restart nginx
+An example of how to set up /sites-available/default and /sites-enabled/default can be found under the nginx file. if you change the root index being used, you will need to restart nginx
