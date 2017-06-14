@@ -2,8 +2,8 @@
 web app created using MEAN stack softwaer bundle for learing how to work JavaScript
 
 Steps that were followed can be found here:  
- ![Youtube Link](https://www.youtube.com/watch?v=Lzi2xYQdwWc)  
- ![GitHub Link](https://github.com/hwz/chirp)
+ [Youtube Link](https://www.youtube.com/watch?v=Lzi2xYQdwWc)  
+ [GitHub Link](https://github.com/hwz/chirp)
 
 ## Steps used to set up nginx web server on AWS
 ```
