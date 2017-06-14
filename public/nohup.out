@@ -73,3 +73,6 @@ debug2
 debug1
 debug2
 [0mGET /api/posts [32m200 [0m2.879 ms - 744[0m
+debug1
+debug2
+[0mGET /api/posts [32m200 [0m1.908 ms - 744[0m

@@ -19,3 +19,10 @@ ufw allow proto tcp from 154.5.57.1 to 172.31.5.6 port 22
 ufw enable  
 fuser -k 80/tcp
 ```
+  
+##To locate the root index being used for nginx
+run  
+```
+sudo find / -name sites-available*
+```
+if you change the root index being used, you will need to restart nginx
