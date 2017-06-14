@@ -13,7 +13,7 @@ ufw app list
 ufw allow "Nginx HTTP'
 ufw status  
 service nginx status  
-ufw allow proto tcp from 154.5.57.1 to 172.31.5.6 port 22  
+ufw allow proto tcp from 192.168.1.1 to 172.31.5.6 port 22  
  first ip is your own IP which you can get here -> https://www.iplocation.net/find-ip-address  
  second IP is the private ip of the machine that is hosting the app  
 ufw enable  
