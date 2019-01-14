@@ -8,9 +8,9 @@ Steps that were followed can be found here:
 Don't feel like folllowing along with the 4 and a half hour vid? Follow the below steps to quickly set it up.  
   
 ### Table of Contents  
- - [Steps used to set up nginx web server on AWS](#basic-instructions-that-were-used-for-site-creation)  
-    - [Nginx Config File](#basic-instructions-for-site-set-up)  
- - [Setup the App](#miscellaniousextra-references)  
+ - [Steps used to set up nginx web server on AWS](#steps-used-to-set-up-nginx-web-server-on-aws)  
+    - [Nginx Config File](#nginx-config-file)  
+ - [Setup the App](#setup-the-app)  
   
 ## Steps used to set up nginx web server on AWS  
 ```
