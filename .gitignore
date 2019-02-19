@@ -3,4 +3,4 @@ nohup.out
 npm-debug.log*
 output.log
 package-lock.json
-package.json
+mongo_log*
