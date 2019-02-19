@@ -22,7 +22,7 @@ sudo ln -s /etc/nginx/sites-available/chirp /etc/nginx/sites-enabled/.
 ```  
   
 ### Nginx Config File  
-(/etc/nginx/sites-available/chirp)
+(`/etc/nginx/sites-available/chirp`)
 ```shell
 server {
         listen 80;
@@ -49,7 +49,7 @@ server {
 }
 ```
 
-(etc/nginx/sites-available/default)
+(`etc/nginx/sites-available/default`)
 ```
 server {
         listen 80 default_server;
