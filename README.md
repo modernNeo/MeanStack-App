@@ -4,25 +4,90 @@ web app created using MEAN stack softwaer bundle for learing how to work JavaScr
 Steps that were followed can be found here:  
  [Youtube Link](https://www.youtube.com/watch?v=Lzi2xYQdwWc)  
  [GitHub Link](https://github.com/hwz/chirp)
-
-## Steps used to set up nginx web server on AWS
+  
+Don't feel like folllowing along with the 4 and a half hour vid? Follow the below steps to quickly set it up.  
+  
+### Table of Contents  
+ - [Steps used to set up nginx web server on AWS](#steps-used-to-set-up-nginx-web-server-on-aws)  
+    - [Nginx Config File](#nginx-config-file)  
+ - [Setup the App](#setup-the-app)  
+  
+## Steps used to set up nginx web server on AWS  
 ```
 sudo apt-get update  
 sudo apt-get install nginx  
-ufw app list
-ufw allow "Nginx HTTP'
-ufw status  
-service nginx status  
-ufw allow proto tcp from 192.168.1.1 to 172.31.5.6 port 22  
- first ip is your own IP which you can get here -> https://www.iplocation.net/find-ip-address  
- second IP is the private ip of the machine that is hosting the app  
-ufw enable  
-fuser -k 80/tcp
+sudo systemctl status|start|stop|restart nginx
+sudo vim /etc/nginx/sites-available/default
+sudo ln -s /etc/nginx/sites-available/chirp /etc/nginx/sites-enabled/.
+```  
+  
+### Nginx Config File  
+(`/etc/nginx/sites-available/chirp`)
+```shell
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /home/jace/MeanStack-App/public;
+
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name chirp.jacemanshadi.ca;
+
+        location / {
+        		try_files $uri $uri/ =404;
+        }
+
+        location /api {
+                proxy_pass http://127.0.0.1:3000;
+        }
+
+        location /auth {
+                proxy_pass http://127.0.0.1:3000;
+        }
+}
+```
+
+(`etc/nginx/sites-available/default`)
+```
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        root /home/jace/onlineResume;
+
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+}
 ```
   
-##To locate the root index being used for nginx
-run  
+## Setup the App  
+```shell
+sudo apt-get install -y nodejs
+sudo apt-get install -y npm
+sudo npm install express-generator -g
+npm install
+npm install passport --save
+npm install passport-local --save
+npm install bcrypt-nodejs --save
+npm install express-session --save
+npm install mongoose --save
+sudo apt-get install -y mongodb-server-core mongodb-clients
+sudo mkdir -p /data/db
+sudo chown -R <username>:<main_group> /data/db
+
+sudo apt-get install -y mongodb
+sudo systemctl restart mongodb
+touch mongo_log
+mongod  --logpath /path/to/mongo_log
+npm start &
 ```
-sudo find / -name sites-available*
-```
-An example of how to set up /sites-available/default and /sites-enabled/default can be found under the nginx file. if you change the root index being used, you will need to restart nginx

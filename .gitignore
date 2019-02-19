@@ -1,0 +1,6 @@
+node_modules/
+nohup.out
+npm-debug.log*
+output.log
+package-lock.json
+mongo_log*
